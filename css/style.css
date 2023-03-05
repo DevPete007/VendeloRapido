@@ -1,0 +1,211 @@
+/* Para el título */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size : 3.5em
+}
+
+/* Para el eslogan */
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* Estilos para el menú horizontal */
+nav {
+  background-color: #0a5433;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: rgb(247, 244, 244);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #1f7825;
+}
+
+nav .active {
+  background-color: #4CAF50;
+}
+
+/* Estilos para el submenú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: green;
+
+  
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #055c2f;
+}
+/* Para el submenú de categorías */
+#submenu {
+  background-color: #170505;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  margin: 20px 0;
+  width: 30%;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+section a:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Para las imágenes de categorías */
+section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* Para el contenedor de ingreso y suscripción */
+.login-subscribe {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+/* Para los enlaces de ingreso y suscripción */
+.login-subscribe a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+/* Para cambiar el color del enlace cuando se coloca el mouse encima */
+.login-subscribe a:hover {
+  background-color: #333;
+}
+
+/* FOOTER  */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.product {
+  width: 300px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product a {
+  display: block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
