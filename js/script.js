@@ -19,3 +19,13 @@ images.forEach(img => {
     });
   });
 });
+
+
+const imagenes = document.querySelectorAll('.zoom-imagen');
+
+imagenes.forEach((imagen) => {
+  imagen.addEventListener('mouseleave', () => {
+    imagen.style.transform = 'scale(1)';
+  });
+});
+

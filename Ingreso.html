@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VENDELO RAPIDO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
+    <h1>VENDELO RAPIDO</h1>
+    <h2>La mejor página para vender y comprar equipo industrial</h2>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Categorías</a>
+                <div class="dropdown-content">
+                    <a href="construccion.html">Construcción</a>
+                    <a href="./generacion_energia.html">Generación energía</a>
+                    <a href="./agricola.html">Agrícola</a>
+                    <a href="./refrigeracion.html">Refrigeración</a>
+                    <a href="#">Compresores</a>
+                    <a href="#">Generación de vapor</a>
+                    <a href="#">Minería</a>
+                    <a href="#">Soldadura</a>
+                    <a href="#">Cocina industrial</a>
+                    <a href="#">Textiles</a>
+                    <a href="#">Montacarga</a>
+                    <a href="#">Maquinas herramientas</a>
+                </div>
+            </li>
+            <li><a href="./como_vender.html">Como vender</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./quienes_somos.html">Quienes somos</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <form method="POST" action="guardar_datos.php" enctype="multipart/form-data" class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        
+        <div class="campo">
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+        
+        <div class="campo">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        
+        <div class="campo">
+            <label for="categoria">Categoría del producto:</label>
+            <select id="categoria" name="categoria" required>
+              <option value="" disabled selected>Seleccione una categoría</option>
+              <option value="construccion">Construcción</option>
+              <option value="generacion_energia">Generación de Energía</option>
+              <option value="agricola">Agrícola</option>
+              <option value="refrigeracion">Refrigeración</option>
+              <option value="compresores">Compresores</option>
+              <option value="generacion_vapor">Generación de Vapor</option>
+              <option value="mineria">Minería</option>
+              <option value="soldadura">Soldadura</option>
+              <option value="cocina_industrial">Cocina Industrial</option>
+              <option value="textiles">Textiles</option>
+              <option value="montacargas">Montacargas</option>
+            </select>
+        </div>
+        
+        <div class="campo">
+          <label for="titulo">Título del producto:</label>
+          <input type="text" id="titulo" name="titulo" required>
+        </div>
+        
+        <div class="campo">
+          <label for="descripcion">Breve descripción:</label>
+          <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
+        
+        <div class="campo">
+          <label for="contacto">Datos de contacto:</label>
+          <textarea id="contacto" name="contacto" required></textarea>
+        </div>
+        
+        <div class="campo">
+          <label for="precio">Precio:</label>
+          <input type="number" id="precio" name="precio" required>
+        </div>
+        
+        <div class="campo">
+          <label for="fotos">Subir fotos:</label>
+          <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple required>
+        </div>
+        
+        <div class="campo">
+          <input type="submit" value="Guardar">
+        </div>
+      </form>
+         
+
+
+ </body> 
+  

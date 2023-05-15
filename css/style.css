@@ -91,17 +91,33 @@ section h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
+/* Efecto de las imagenes*/
 section img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  
 }
 
 section a:hover img {
   transform: scale(1.1);
+}
+
+.efecto-imagen {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+/* Zoom para la imagen*/
+.zoom-imagen {
+  transition: transform 0.3s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  
+}
+
+ 
+.zoom-imagen:hover {
+  transform: scale(1.2);
 }
 
 
@@ -208,4 +224,123 @@ body {
 
 .container {
   padding: 2px 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}p
+
+#logo {
+  float: left;
+  width: 100px; /* ajustar el tamaño de la imagen */
+  margin-right: 100px; /* agregar un margen a la derecha del encabezado */
+}
+
+#flag {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+
+/* Los campos de INGRESO*/ 
+.formulario {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input[type="file"] {
+  display: block;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*Login */
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
 }

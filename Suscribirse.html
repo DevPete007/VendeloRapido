@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>VENDELO RAPIDO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>Formulario de Suscripción</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="text"], input[type="tel"], select {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+		}
+		select {
+			width: 50%;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+        <ul>
+            <li><a class="active" href="Index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Categorías</a>
+                <div class="dropdown-content">
+                    <a href="construccion.html">Construcción</a>
+                    <a href="./generacion_energia.html">Generación energía</a>
+                    <a href="./agricola.html">Agrícola</a>
+                    <a href="./refrigeracion.html">Refrigeración</a>
+                    <a href="#">Compresores</a>
+                    <a href="#">Generación de vapor</a>
+                    <a href="#">Minería</a>
+                    <a href="#">Soldadura</a>
+                    <a href="#">Cocina industrial</a>
+                    <a href="#">Textiles</a>
+                    <a href="#">Montacarga</a>
+                    <a href="#">Maquinas herramientas</a>
+                </div>
+            </li>
+            <li><a href="./como_vender.html">Como vender</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./quienes_somos.html">Quienes somos</a></li>
+        </ul>
+    </nav>
+	<h2>Formulario de Suscripción</h2>
+	<form action="#" method="post">
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required>
+
+		<label for="telefono">Teléfono:</label>
+		<input type="tel" id="telefono" name="telefono" required onkeypress="return event.keyCode >= 48 && event.keyCode <= 57">
+		
+
+
+		<label for="correo">Correo:</label>
+		<input type="text" id="correo" name="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+
+		
+
+		<label for="tipo_suscripcion">Tipo de Suscripción:</label>
+		<select id="tipo_suscripcion" name="tipo_suscripcion">
+			<option value="">--Seleccione--</option>
+			<option value="novedad">Recibir Novedad</option>
+			<option value="vendedor">Vendedor</option>
+		</select>
+		<div id="comprobante" style="display:none">Mandar su comprobante de pago a: correo@correo.com</div>
+
+
+		<input type="submit" value="Suscribirse">
+	</form>
+	<script>
+		// Validación del formulario con Javascript
+		const form = document.querySelector('form');
+		form.addEventListener('submit', function(event) {
+			const nombre = document.getElementById('nombre').value;
+			const telefono = document.getElementById('telefono').value;
+			const correo = document.getElementById('correo').value;
+			const tipo_suscripcion = document.getElementById('tipo_suscripcion').value;
+	
+			if (!nombre || !telefono || !correo || !tipo_suscripcion) {
+				event.preventDefault();
+				alert('Por favor complete todos los campos.');
+			}
+	
+			if (tipo_suscripcion === "vendedor") {
+				const div = document.createElement('div');
+				div.innerText = "Mandar su comprobante de pago a: correo@correo.com";
+				form.appendChild(div);
+			}
+		});
+	
+		const tipo_suscripcion = document.getElementById('tipo_suscripcion');
+		const comprobante = document.getElementById('comprobante');
+	
+		tipo_suscripcion.addEventListener('change', function() {
+			if (tipo_suscripcion.value === 'vendedor') {
+				comprobante.style.display = 'block';
+			} else {
+				comprobante.style.display = 'none';
+			}
+		});
+	</script>
+	
+</body>
+</html>
